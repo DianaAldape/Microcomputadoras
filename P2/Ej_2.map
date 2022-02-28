@@ -1,12 +1,12 @@
 MPLINK 4.49, Linker
-Linker Map File - Created Mon Feb 28 15:34:49 2022
+Linker Map File - Created Mon Feb 28 15:56:26 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                    .org_0       code   0x000000    program   0x000000
                    .org_1       code   0x000000    program   0x000002
-                   .org_2       code   0x000005    program   0x000026
+                   .org_2       code   0x000005    program   0x000034
 
 
 
@@ -14,25 +14,27 @@ Linker Map File - Created Mon Feb 28 15:34:49 2022
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000000      
-                            0x000005    0x000017      
-            20 out of 8454 program addresses used, program memory utilization is 0%
+                            0x000005    0x00001e      
+            27 out of 8454 program addresses used, program memory utilization is 0%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                    ciclo   0x000009    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
-                   inicio   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
-                   minimo   0x000010    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
+               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   inicio   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
-                    ciclo   0x000009    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
-                   minimo   0x000010    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej_2.ASM
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
 
 
