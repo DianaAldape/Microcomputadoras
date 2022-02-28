@@ -1,0 +1,42 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Mon Feb 28 15:33:06 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x000034
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x00001e      
+            27 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 COMPARAR   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                      FIN   0x00001f    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+             INTERCAMBIAR   0x000018    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                 MANTENER   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                 COMPARAR   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                 MANTENER   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+             INTERCAMBIAR   0x000018    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+                      FIN   0x00001f    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P2\Ej3_2.ASM
+
+

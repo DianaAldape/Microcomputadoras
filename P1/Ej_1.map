@@ -1,0 +1,35 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Mon Feb 21 21:53:54 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00000e
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000d      
+            14 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000004    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+                     ORG0   0x000000    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+                     ORG5   0x000004    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     ORG0   0x000000    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+                   INICIO   0x000004    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+                     ORG5   0x000004    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_1.ASM
+
+
