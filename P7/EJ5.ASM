@@ -1,0 +1,100 @@
+	processor 16f877
+	include<p16f877.inc>
+AUX equ 0x23
+	var1 EQU H'30'	
+	var2 EQU H'31'
+	var3 EQU H'32'
+	var4 EQU H'33'
+	cte1 equ 70h		
+	cte2 equ 70h		
+	cte3 equ 70h
+ORG 0
+GOTO INICIO
+ORG 5
+INICIO:
+	BSF STATUS,RP0	;Cambio al banco 1
+	BCF STATUS,RP1
+	CLRF PORTB		;PORTB = 0
+	CLRF TRISB		;Configuro puerto B como salida
+	BSF TXSTA,BRGH  ;BRGH = 1
+	MOVLW D'129'	;W = 129
+	MOVWF SPBRG		;SPBRG = W = 129
+	BCF TXSTA,SYNC	;SYNC = 0
+	BSF TXSTA,TXEN	;TXEN = 1
+	BCF STATUS,RP0	;Cambio al banco 0
+	BSF RCSTA,SPEN	;SPEN  = 1
+	BSF RCSTA,CREN	;CREN = 1
+RECIBE:
+	BTFSS PIR1,RCIF	;If (RCIF = 1) {salta}
+	GOTO RECIBE		;else {RECIBE} 
+	MOVF RCREG,W	;W <= RCREG
+	MOVWF AUX			
+	MOVWF TXREG		;Vemos en la terminal lo que se tecleo
+	BSF STATUS,RP0	;Cambio banco 1
+TRASMITE:
+	MOVF PORTB
+	MOVWF TXREG		;TXREG = W
+	BSF STATUS,RP0	;Cambio al banco 1
+	BTFSS TXSTA,TRMT;if (TRMT = 1) {Salta}
+	GOTO TRASMITE	;else {TRANSMITE}
+	BCF STATUS,RP0	;Cambio al banco 0
+	;CASO 'D'
+	SUBLW 0X44 ;ASCII D = 68
+	BTFSC STATUS, Z
+	GOTO CASO_D
+	;CASO 'd'
+	SUBLW 0X64 ;ASCII d = 100
+	BTFSC STATUS, Z
+	GOTO CASO_D
+	;CASO 'I'
+	SUBLW 0X49	;ASCII I = 73
+	BTFSC STATUS, Z
+	GOTO CASO_I
+	;CASO 'i'
+	SUBLW 0X69	;ASCII i = 105
+	BTFSC STATUS, Z
+	GOTO CASO_I
+	GOTO RECIBE		;Va a RECIBE
+CASO_D:
+	MOVLW 0X80
+	MOVWF PORTB
+	BCF	STATUS,C		;Limpiamos 
+	CALL RETARDO
+CORRIMIENTO_DER:
+	RRF PORTB,1
+  	CALL RETARDO
+   	BTFSS STATUS, C
+   	GOTO CORRIMIENTO_DER
+	GOTO RECIBE
+CASO_I:
+	MOVLW 0X01
+	MOVWF PORTB
+	BCF STATUS, C	
+	CALL RETARDO
+CORRIMIENTO_IZQ:
+	RLF PORTB,1
+  	CALL RETARDO
+   	BTFSS STATUS, C
+   	GOTO CORRIMIENTO_IZQ
+	GOTO RECIBE
+;Rutina que genera un retardo
+RETARDO: 
+	MOVLW cte1			
+	MOVWF var2		
+TRES
+	MOVLW cte2		
+	MOVWF var3	
+DOS
+	MOVLW cte3		
+	MOVWF var4	
+UNO
+	DECFSZ var4			;Decementa var4
+	GOTO UNO			;Si el resultado es diferente de 0 
+	DECFSZ var3			;Decementa var3
+	GOTO DOS			;Si el resultado es diferente de 0 
+	DECFSZ var2			;Decementa var2
+	GOTO TRES			;Si el resultado es diferente de 0 
+
+	RETURN
+end
+

@@ -1,5 +1,5 @@
 MPLINK 4.49, Linker
-Linker Map File - Created Mon Feb 28 15:56:26 2022
+Linker Map File - Created Mon Feb 28 16:16:20 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -22,19 +22,19 @@ Linker Map File - Created Mon Feb 28 15:56:26 2022
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
-               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Micros\Microcomputadoras\P2\Ej_2.ASM
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+                     LOOP   0x00000c    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+            CONTINUARLOOP   0x000016    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
+               ASIGNARMIN   0x00001a    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P2\Ej_2.ASM
 
 

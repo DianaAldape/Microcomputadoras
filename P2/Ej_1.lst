@@ -1,4 +1,4 @@
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  1
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -6,7 +6,6 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 
                       00001 
 Warning[205]: Found directive in column 1. (PROCESSOR)
-Warning[215]: Processor superseded by command line.  Verify processor symbol.
                       00002 PROCESSOR 16f877
 Warning[205]: Found directive in column 1. (INCLUDE)
                       00003 INCLUDE <p16f877.inc>
@@ -21,24 +20,25 @@ Warning[205]: Found directive in column 1. (INCLUDE)
 Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
                       00540         LIST
                       00004 
-000000                00005 ORG0
+0000                  00005 ORG0
 Warning[203]: Found opcode in column 1. (GOTO)
-000000 EF02 F000      00006 GOTO INICIO
-000004                00007 ORG5
+0000   2801           00006 GOTO INICIO
+0001                  00007 ORG5
                       00008 
-000004 9C03           00009 INICIO: bcf STATUS,RP1  ;Coloca en 0 al bit RP1 de STATUS, RP1 = 0
-000006 8A03           00010                 bsf STATUS,RP0  ;Coloca en 1 al bit RP0 de STATUS
-000008 0E20           00011                 movlw 0x20              ;Carga un 0x20 al registro W
-00000A 6E04           00012                 movwf FSR               ;Mueve el contenido de W al registro FSR
-00000C 0E5F           00013 LOOP:   movlw 0x5F              ;Carga un 0x5F al registro W
-00000E 6E00           00014                 movwf INDF              ;Mueve el contenido de W a la dirección apuntada
+0001   1303           00009 INICIO: bcf STATUS,RP1  ;Coloca en 0 al bit RP1 de STATUS, RP1 = 0
+0002   1683           00010                 bsf STATUS,RP0  ;Coloca en 1 al bit RP0 de STATUS
+0003   3020           00011                 movlw 0x20              ;Carga un 0x20 al registro W
+0004   0084           00012                 movwf FSR               ;Mueve el contenido de W al registro FSR
+0005   305F           00013 LOOP:   movlw 0x5F              ;Carga un 0x5F al registro W
+0006   0080           00014                 movwf INDF              ;Mueve el contenido de W a la dirección apuntada
                       00015                                                 ;por el registro FSR 
-000010 2A04           00016                 incf FSR                ;Incrementa FSR
-000012 AC04           00017                 btfss FSR,6             ;IF (FSR == 40) Si es 1, salta. 
-000014 EF06 F000      00018                 GOTO LOOP               ;Regresa a etiqueta LOOP
-000018 EF0C F000      00019                 GOTO $
+Message[305]: Using default destination of 1 (file).
+0007   0A84           00016                 incf FSR                ;Incrementa FSR
+0008   1F04           00017                 btfss FSR,6             ;IF (FSR == 40) Si es 1, salta. 
+0009   2805           00018                 GOTO LOOP               ;Regresa a etiqueta LOOP
+000A   280A           00019                 GOTO $
                       00020                 END                             ;Fin del programa
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  2
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  2
 
 
 SYMBOL TABLE
@@ -97,7 +97,7 @@ CSRC                              00000007
 D                                 00000005
 DATA_ADDRESS                      00000005
 DC                                00000001
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  3
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  3
 
 
 SYMBOL TABLE
@@ -129,13 +129,13 @@ I2C_STOP                          00000004
 IBF                               00000007
 IBOV                              00000005
 INDF                              00000000
-INICIO                            00000004
+INICIO                            00000001
 INTCON                            0000000B
 INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IRP                               00000007
-LOOP                              0000000C
+LOOP                              00000005
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BO                            00000000
@@ -154,9 +154,9 @@ OBF                               00000006
 OERR                              00000001
 OPTION_REG                        00000081
 ORG0                              00000000
-ORG5                              00000004
+ORG5                              00000001
 P                                 00000004
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  4
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  4
 
 
 SYMBOL TABLE
@@ -215,7 +215,7 @@ RC6                               00000006
 RC7                               00000007
 RC8_9                             00000006
 RC9                               00000006
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  5
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  5
 
 
 SYMBOL TABLE
@@ -274,7 +274,7 @@ T0IF                              00000002
 T0SE                              00000004
 T1CKPS0                           00000004
 T1CKPS1                           00000005
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  6
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  6
 
 
 SYMBOL TABLE
@@ -333,7 +333,7 @@ TRISC7                            00000007
 TRISD                             00000088
 TRISD0                            00000000
 TRISD1                            00000001
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  7
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  7
 
 
 SYMBOL TABLE
@@ -392,7 +392,7 @@ _IDLOC3                           00002003
 _LP_OSC                           00003FFC
 _LVP_OFF                          00003F7F
 _LVP_ON                           00003FFF
-MPASM  5.51                          EJ_1.ASM   2-22-2022  9:02:44         PAGE  8
+MPASM  5.51                          EJ_1.ASM   2-28-2022  16:24:16         PAGE  8
 
 
 SYMBOL TABLE
@@ -410,21 +410,21 @@ _WRT_ENABLE_ON                    00003FFF
 _WRT_OFF                          00003DFF
 _WRT_ON                           00003FFF
 _XT_OSC                           00003FFD
-__18F452                          00000001
+__16F877A                         00000001
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
-0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXX---- ---------------- ----------------
+0000 : XXXXXXXXXXX----- ---------------- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Bytes Used:    28
-Program Memory Bytes Free: 32740
+Program Memory Words Used:    11
+Program Memory Words Free:  8181
 
 
 Errors   :     0
-Warnings :     4 reported,     0 suppressed
-Messages :     1 reported,     0 suppressed
+Warnings :     3 reported,     0 suppressed
+Messages :     2 reported,     0 suppressed
 
 

@@ -1,11 +1,12 @@
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  1
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00001                 processor 16f877
-                      00002                 include <p16f877.inc>
+                      00001                 
+                      00002                 processor 16f877
+                      00003                 include <p16f877.inc>
                       00001         LIST
                       00002 
                       00003 ;==========================================================================
@@ -16,27 +17,30 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00008 
 Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
                       00540         LIST
-  00000025            00003 J               equ H'25'
-  00000026            00004 K               equ H'26'
-  00000027            00005 C1              equ H'27'
-  00000028            00006 R1              equ H'28'
-0000                  00007                 org 0
-0000   2805           00008                 goto INICIO
-0005                  00009                 org 5
-0005   0825           00010 INICIO: movf J,0; mueve de J al registro W
-0006   0726           00011                 addwf K,0; W <- W+K
-0007   00A8           00012                 movwf R1; Mueve el resultado de la operación de W a R1
-0008   1C03           00013                 btfss STATUS,C; Si el carry es 1, salta una instrucción
-0009   280B           00014                 goto NO_ACARREO; entra si no hubo acarreo
-000A   280E           00015                 goto ACARREO; entra si hubo acarreo
-000B   3000           00016 NO_ACARREO: movlw H'00'; coloca un h'00' en W
-000C   00A7           00017                 movwf C1; mueve el contenido de W a C1
-000D   2805           00018                 goto INICIO; salta a inicio
-000E   3001           00019 ACARREO: movlw H'01'; coloca un h'01' en W
-000F   00A7           00020                 movwf C1; mueve el contenido de W a C1
-0010   2805           00021                 goto INICIO; salta a inicio
-                      00022                 end
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  2
+  00000025            00004 J               equ H'25'
+  00000026            00005 K               equ H'26'
+  00000027            00006 C1              equ H'27'
+  00000028            00007 R1              equ H'28'
+0000                  00008                 org 0
+0000   2805           00009                 goto INICIO
+0005                  00010                 org 5
+0005                  00011 INICIO: 
+0005   0825           00012                 movf J,0                ;Mueve de J al registro W
+0006   0726           00013                 addwf K,0               ;W <- W+K
+0007   00A8           00014                 movwf R1                ;Mueve el resultado de la operación de W a R1
+0008   1C03           00015                 btfss STATUS,C  ;Si el carry es 1, salta una instrucción
+0009   280B           00016                 goto NO_ACARREO ;Entra si no hubo acarreo
+000A   280E           00017                 goto ACARREO    ;Entra si hubo acarreo
+000B                  00018 NO_ACARREO: 
+000B   3000           00019                 movlw H'00'     ;Coloca un h'00' en W
+000C   00A7           00020                 movwf C1                ;Mueve el contenido de W a C1
+000D   2805           00021                 goto INICIO             ;Salta a inicio
+000E                  00022 ACARREO: 
+000E   3001           00023                 movlw H'01'     ;Coloca un h'01' en W
+000F   00A7           00024                 movwf C1                ;Mueve el contenido de W a C1
+0010   2805           00025                 goto INICIO             ;Regresa a INCIO
+                      00026                 end                             ;Fin del programa
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  2
 
 
 SYMBOL TABLE
@@ -95,7 +99,7 @@ CKP                               00000004
 CREN                              00000004
 CSRC                              00000007
 D                                 00000005
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  3
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  3
 
 
 SYMBOL TABLE
@@ -154,7 +158,7 @@ NOT_WRITE                         00000002
 NO_ACARREO                        0000000B
 OBF                               00000006
 OERR                              00000001
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  4
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  4
 
 
 SYMBOL TABLE
@@ -213,7 +217,7 @@ RC3                               00000003
 RC4                               00000004
 RC5                               00000005
 RC6                               00000006
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  5
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  5
 
 
 SYMBOL TABLE
@@ -272,7 +276,7 @@ SYNC                              00000004
 T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  6
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  6
 
 
 SYMBOL TABLE
@@ -331,7 +335,7 @@ TRISC4                            00000004
 TRISC5                            00000005
 TRISC6                            00000006
 TRISC7                            00000007
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  7
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  7
 
 
 SYMBOL TABLE
@@ -390,7 +394,7 @@ _IDLOC0                           00002000
 _IDLOC1                           00002001
 _IDLOC2                           00002002
 _IDLOC3                           00002003
-MPASM  5.51                        EJ_3_2.ASM   2-28-2022  15:20:01         PAGE  8
+MPASM  5.51                        EJ_3_2.ASM   2-28-2022  16:06:22         PAGE  8
 
 
 SYMBOL TABLE

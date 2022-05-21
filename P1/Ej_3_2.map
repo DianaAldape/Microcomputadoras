@@ -1,5 +1,5 @@
 MPLINK 4.49, Linker
-Linker Map File - Created Mon Feb 28 15:20:02 2022
+Linker Map File - Created Mon Feb 28 16:06:23 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -22,17 +22,17 @@ Linker Map File - Created Mon Feb 28 15:20:02 2022
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                  ACARREO   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
-                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
-               NO_ACARREO   0x00000b    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
+                  ACARREO   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
+               NO_ACARREO   0x00000b    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
-               NO_ACARREO   0x00000b    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
-                  ACARREO   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab\P1\Ej_3_2.asm
+                   INICIO   0x000005    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
+               NO_ACARREO   0x00000b    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
+                  ACARREO   0x00000e    program     static F:\Users\HP\Documents\Escuela\Semestre2022-2\Microcomputadoras\Lab. Microcomputadoras\Lab. Micros_Git\Microcomputadoras\P1\Ej_3_2.asm
 
 

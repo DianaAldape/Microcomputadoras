@@ -1,4 +1,4 @@
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  1
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -16,57 +16,55 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00008 
 Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
                       00540         LIST
-                      00003 ;Programa que ordena de forma ascendente 
-  00000041            00004 CONT    equ H'41'
-  00000042            00005 AUX     equ H'42'
-                      00006 
-0000                  00007                 ORG 0
-0000   2805           00008                 GOTO INICIO 
-0005                  00009                 ORG 5           
-0005                  00010 INICIO: 
-0005   01C2           00011                 CLRF AUX                ;Limpia AUX
+  00000041            00003 CONT    equ H'41'
+  00000042            00004 AUX     equ H'42'
+                      00005 
+0000                  00006                 ORG 0
+0000   2805           00007                 GOTO INICIO 
+0005                  00008                 ORG 5           
+0005                  00009 INICIO: 
+0005   01C2           00010                 CLRF AUX                ;Limpia AUX
 Message[305]: Using default destination of 1 (file).
-0006   0AC1           00012                 INCF CONT               ;Incrementa CONT
-0007   3019           00013                 MOVLW 19                ;W = 10
-0008   0641           00014                 XORWF CONT, W   ;W XOR CONT
-0009   1903           00015                 BTFSC STATUS, Z ;Si (Z==0): Salta
-000A   281F           00016                 GOTO FIN                ;else : Termina el programa
-000B   3020           00017                 MOVLW 0x20              ;Carga 0x20 al registro W
-000C   0084           00018                 MOVWF FSR               ;Mueve el contenido de W al registro FSR (FSR = 0x20)
-000D   0820           00019                 MOVF 0x20, 0    ;Mueve el contenido de 0x20 a W
-000E                  00020 COMPARAR: 
-000E   1A04           00021                 BTFSC FSR,4     ;if (FCR=!0x30) Salta
-000F   2805           00022                 GOTO INICIO             ;Regresa a inicio
+0006   0AC1           00011                 INCF CONT               ;Incrementa CONT
+0007   3019           00012                 MOVLW 19                ;W = 10
+0008   0641           00013                 XORWF CONT, W   ;W XOR CONT
+0009   1903           00014                 BTFSC STATUS, Z ;Si (Z==0): Salta
+000A   281F           00015                 GOTO FIN                ;else : Termina el programa
+000B   3020           00016                 MOVLW 0x20              ;Carga 0x20 al registro W
+000C   0084           00017                 MOVWF FSR               ;Mueve el contenido de W al registro FSR (FSR = 0x20)
+000D   0820           00018                 MOVF 0x20, 0    ;Mueve el contenido de 0x20 a W
+000E                  00019 COMPARAR: 
+000E   1A04           00020                 BTFSC FSR,4     ;if (FCR=!0x30) Salta
+000F   2805           00021                 GOTO INICIO             ;Regresa a inicio
 Message[305]: Using default destination of 1 (file).
-0010   0A84           00023                 INCF FSR                ;FSR++
-0011   00C2           00024                 MOVWF AUX               ;AUX = W 
-0012   0200           00025                 SUBWF INDF, 0   ; W= FSR-W
-0013   1C03           00026                 BTFSS STATUS, C ; If (C==1) Mantener
-0014   2818           00027                 GOTO INTERCAMBIAR
-0015   2816           00028                 GOTO MANTENER   
-0016                  00029 MANTENER:
-0016   0800           00030                 MOVFW INDF              ;Mueve el contenido de la dirección apuntada por FSR a W
-0017   280E           00031                 GOTO COMPARAR   ;Regresa a comparar
-0018                  00032 INTERCAMBIAR:
-0018   0800           00033                 MOVF INDF, W    ;W = el contenido de la dirreción a la que apunta FSR
+0010   0A84           00022                 INCF FSR                ;FSR++
+0011   00C2           00023                 MOVWF AUX               ;AUX = W 
+0012   0200           00024                 SUBWF INDF, 0   ; W= FSR-W
+0013   1C03           00025                 BTFSS STATUS, C ; If (C==1) Mantener
+0014   2818           00026                 GOTO INTERCAMBIAR
+0015   2816           00027                 GOTO MANTENER   
+0016                  00028 MANTENER:
+0016   0800           00029                 MOVFW INDF              ;Mueve el contenido de la dirección apuntada por FSR a W
+0017   280E           00030                 GOTO COMPARAR   ;Regresa a comparar
+0018                  00031 INTERCAMBIAR:
+0018   0800           00032                 MOVF INDF, W    ;W = el contenido de la dirreción a la que apunta FSR
 Message[305]: Using default destination of 1 (file).
-0019   0384           00034                 DECF FSR                ;FCR--
-001A   0080           00035                 MOVWF INDF              ;Copia lo que hay en W a la dirección que apunta FCR
-001B   0842           00036                 MOVFW AUX               ;W=AUX
+0019   0384           00033                 DECF FSR                ;FCR--
+001A   0080           00034                 MOVWF INDF              ;Copia lo que hay en W a la dirección que apunta FCR
+001B   0842           00035                 MOVFW AUX               ;W=AUX
 Message[305]: Using default destination of 1 (file).
-001C   0A84           00037                 INCF FSR                ;FSR++
-                      00038                 ;MOVFW AUX              ;W=AUX
-001D   0080           00039                 MOVWF INDF              ;Copia W a la dirección a la que apunt FCR
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  2
+001C   0A84           00036                 INCF FSR                ;FSR++
+001D   0080           00037                 MOVWF INDF              ;Copia W a la dirección a la que apunt FCR
+001E   280E           00038                 GOTO COMPARAR   ;Regresa a comparar
+001F                  00039 FIN:    
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-001E   280E           00040                 GOTO COMPARAR   ;Regresa a comparar
-001F                  00041 FIN:    
-                      00042                 END
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  3
+                      00040                 END
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  3
 
 
 SYMBOL TABLE
@@ -125,7 +123,7 @@ COMPARAR                          0000000E
 CONT                              00000041
 CREN                              00000004
 CSRC                              00000007
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  4
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  4
 
 
 SYMBOL TABLE
@@ -184,7 +182,7 @@ NOT_TX8                           00000006
 NOT_W                             00000002
 NOT_WRITE                         00000002
 OBF                               00000006
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  5
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  5
 
 
 SYMBOL TABLE
@@ -243,7 +241,7 @@ RC3                               00000003
 RC4                               00000004
 RC5                               00000005
 RC6                               00000006
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  6
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  6
 
 
 SYMBOL TABLE
@@ -302,7 +300,7 @@ SYNC                              00000004
 T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  7
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  7
 
 
 SYMBOL TABLE
@@ -361,7 +359,7 @@ TRISC4                            00000004
 TRISC5                            00000005
 TRISC6                            00000006
 TRISC7                            00000007
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  8
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  8
 
 
 SYMBOL TABLE
@@ -420,7 +418,7 @@ _IDLOC0                           00002000
 _IDLOC1                           00002001
 _IDLOC2                           00002002
 _IDLOC3                           00002003
-MPASM  5.51                         EJ3_2.ASM   2-28-2022  15:33:04         PAGE  9
+MPASM  5.51                         EJ3_2.ASM   3-21-2022  16:32:54         PAGE  9
 
 
 SYMBOL TABLE

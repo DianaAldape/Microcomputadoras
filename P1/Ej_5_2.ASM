@@ -1,11 +1,10 @@
+
 		processor 16f877
 		include <p16f877.inc>
-
 J		equ H'20'
 		org 0
 		goto INICIO
 		org 5
-
 INICIO:	movlw 00h		;W=0
 		movwf J			;Mueve el contendio de W a J
 CICLO:	

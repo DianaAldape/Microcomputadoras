@@ -1,0 +1,44 @@
+	PROCESSOR 16F877
+	INCLUDE <P16F877.INC>
+AUX EQU 0X20
+	ORG 0
+	GOTO INICIO
+	ORG 5
+INICIO:
+	CLRF PORTA		;Limpia PORTA
+	BSF STATUS ,RP0	;Cambia a Banco 1
+	BCF STATUS, RP1
+	CLRF TRISB	
+	MOVLW 0X07		;Define puertos A y E como digitales
+	MOVWF ADCON1
+	MOVLW 0X3F		;Configura puerto A como entrada
+	MOVWF TRISA
+	BCF STATUS, RP0	;Cambia al banco 0
+	MOVLW 0X00
+	MOVWF PORTB		;Pone en 0 PORTB
+;CASO 0, CUANDO EL PUERTO A VALE 000000
+LOOP: 	
+	MOVF PORTA, W	; Se guarda lo que se tiene del Puerto A
+	MOVWF AUX
+	MOVF AUX , F	
+	BTFSS STATUS, Z	;if(z==1) {Salta}
+ 	GOTO LOOP2 		;else {se va a LOOP2}
+	CALL CASO0
+;CASO 1, CUANDO EL PUERTO A VALE 000001
+LOOP2: 
+	MOVF AUX ,W
+	SUBLW 0X01 		;W = 0X01 - W 
+	BTFSS STATUS, Z	;if(z==1) {Salta}
+	GOTO LOOP3		;else {se va a LOOP3}
+	CALL CASO1
+LOOP3:
+	GOTO LOOP	
+CASO0:
+	MOVLW 0X00
+	MOVWF PORTB		;Se apagan los Leds poniendo 0 en PORTB
+	RETURN
+CASO1:
+	MOVLW 0XFF		;Se prenden todos los Leds poniendo FF en PORTB
+	MOVWF PORTB
+	RETURN
+	END

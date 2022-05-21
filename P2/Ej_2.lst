@@ -1,4 +1,4 @@
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  1
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Warning[207]: Found label after column 1. (CONTINUARLOOP)
 0019   2819           00034                         GOTO $
 Warning[207]: Found label after column 1. (ASIGNARMIN)
 001A                  00035                 ASIGNARMIN:
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  2
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -69,7 +69,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 001D   00C0           00039                         MOVWF Min; min = INDF
 001E   2816           00040                         GOTO CONTINUARLOOP
                       00041  END
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  3
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  3
 
 
 SYMBOL TABLE
@@ -128,7 +128,7 @@ CONTINUARLOOP                     00000016
 CREN                              00000004
 CSRC                              00000007
 D                                 00000005
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  4
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  4
 
 
 SYMBOL TABLE
@@ -187,7 +187,7 @@ NOT_WRITE                         00000002
 OBF                               00000006
 OERR                              00000001
 OPTION_REG                        00000081
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  5
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  5
 
 
 SYMBOL TABLE
@@ -246,7 +246,7 @@ RC5                               00000005
 RC6                               00000006
 RC7                               00000007
 RC8_9                             00000006
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  6
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  6
 
 
 SYMBOL TABLE
@@ -305,7 +305,7 @@ T0IE                              00000005
 T0IF                              00000002
 T0SE                              00000004
 T1CKPS0                           00000004
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  7
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  7
 
 
 SYMBOL TABLE
@@ -364,7 +364,7 @@ TRISC6                            00000006
 TRISC7                            00000007
 TRISD                             00000088
 TRISD0                            00000000
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  8
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  8
 
 
 SYMBOL TABLE
@@ -423,7 +423,7 @@ _IDLOC2                           00002002
 _IDLOC3                           00002003
 _LP_OSC                           00003FFC
 _LVP_OFF                          00003F7F
-MPASM  5.51                          EJ_2.ASM   2-28-2022  15:56:25         PAGE  9
+MPASM  5.51                          EJ_2.ASM   2-28-2022  16:16:19         PAGE  9
 
 
 SYMBOL TABLE
